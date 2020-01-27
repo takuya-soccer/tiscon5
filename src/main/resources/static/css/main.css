@@ -193,6 +193,10 @@ ul.label {
     border: 1px solid rgba(34,36,38,.15);
 }
 
+.essential {
+color: red;
+}
+
 td {
     width: 400px;
 }
