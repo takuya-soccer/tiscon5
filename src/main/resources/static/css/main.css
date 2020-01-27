@@ -17,14 +17,16 @@ body {
 }
 
 .btn-primary {
-    background: #FBC0AF;
-    border-color: #FBC0AF;
+
 }
 
 .btn-top {
     width: 30%;
 }
 
+.form-control::placeholder {
+    color: #d3d3d3;
+}
 .ui.main.container {
     padding-top: 80px;
 }
@@ -51,6 +53,11 @@ div.center.column {
     font-size: 1em;
     color: red;
 }
+
+.box-size {
+    width:120px;
+}
+
 
 .register {
     color: #0066CC;
@@ -171,7 +178,7 @@ ul.label {
     line-height: 1em;
     border-radius: .28571429rem;
     position:relative;
-    color: #FFF;
+
 }
 
 .acceptance-icon {
@@ -196,3 +203,22 @@ ul.label {
 td {
     width: 400px;
 }
+
+.phone-number {
+    color:blue;
+    font-size:50px;
+}
+
+.input-information{
+    display:flex;
+    width:120px;
+}
+
+.form-input{
+    margin:10px 10px;
+}
+
+.label{
+    width:15px;
+}
+
