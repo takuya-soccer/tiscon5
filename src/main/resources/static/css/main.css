@@ -178,7 +178,6 @@ ul.label {
     line-height: 1em;
     border-radius: .28571429rem;
     position:relative;
-
 }
 
 .acceptance-icon {
@@ -198,6 +197,10 @@ ul.label {
     padding: 1em;
     border-radius: .28571429rem;
     border: 1px solid rgba(34,36,38,.15);
+}
+
+.essential {
+color: red;
 }
 
 td {
@@ -222,3 +225,12 @@ td {
     width:15px;
 }
 
+
+
+.fieldError{
+    background-color: #ff7f50;
+}
+
+.essential{
+    color: red;
+}
