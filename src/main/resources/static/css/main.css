@@ -200,3 +200,7 @@ color: red;
 td {
     width: 400px;
 }
+
+.fieldError{
+    background-color: #ff7f50;
+}
