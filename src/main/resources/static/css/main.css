@@ -200,3 +200,7 @@ td {
 .fieldError{
     background-color: #ff7f50;
 }
+
+.essential{
+    color: red;
+}
