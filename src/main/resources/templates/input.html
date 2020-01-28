@@ -70,7 +70,7 @@
             <span th:if="${#fields.hasErrors('oldAddress')}" th:errors="*{oldAddress}"
                   style="color: red"></span>
           </div>
-
+        </div>
       </fieldset>
       <fieldset style="margin-bottom:70px;">
         <legend style="font-weight:bold; margin-top:15px;">・荷物情報</legend>
@@ -127,7 +127,6 @@
           <button type="submit" name="calculation" class="btn btn-primary">概算見積もりをする</button>
         </div>
       </div>
-    </div>
   </form>
 </div>
 <script src="../js/jquery-3.4.1.min.js" th:src="@{/js/jquery-3.4.1.min.js}"></script>
