@@ -74,15 +74,13 @@ public class EstimateController {
      * @param model         遷移先に連携するデータ
      * @return 遷移先
      */
-    /*
-    @PostMapping(value = "submit", params = "confirm")
+   /** @PostMapping(value = "submit", params = "confirm")
     String confirm(UserOrderForm userOrderForm, Model model) {
 
         model.addAttribute("prefectures", estimateDAO.getAllPrefectures());
         model.addAttribute("userOrderForm", userOrderForm);
         return "confirm";
-    }
-     */
+    }*/
 
     /**
      * 入力画面に戻る。
