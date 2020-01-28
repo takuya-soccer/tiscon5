@@ -20,6 +20,7 @@ body {
 
 }
 
+
 .btn-top {
     width: 30%;
 }
@@ -54,9 +55,9 @@ div.center.column {
     color: red;
 }
 
-.box-size {
+/*.box-size {
     width:120px;
-}
+}*/
 
 
 .register {
@@ -212,10 +213,10 @@ td {
     font-size:50px;
 }
 
-.input-information{
+/*.input-information{
     display:flex;
     width:120px;
-}
+}*/
 
 .form-input{
     margin:10px 10px;
@@ -234,3 +235,4 @@ td {
 .essential{
     color: red;
 }
+
