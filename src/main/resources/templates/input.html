@@ -14,30 +14,32 @@
 <nav th:insert="/header.html :: header"></nav>
 <div class="container">
   <form th:action="@{/submit}" th:object="${userOrderForm}" class="form-horizontal" method="post">
-    <h1>お見積り情報入力</h1>
+    <h1 style="margin:30px 0;">お見積り情報入力</h1>
     <span th:if="${#fields.hasErrors('all')}">
       <span class="essential">入力誤りがあります</span>
     </span>
     <div class="col-sm-12">
-      <fieldset>
-        <legend>個人情報</legend>
-        <div class="form-group">
-          <label for="customerName">氏名 <span class="essential">(必須)</span></label>
-          <input type="text" id="customerName" name="customerName" th:field="*{customerName}" class="form-control" placeholder="山田太郎" th:errorclass="fieldError"/>
-          <span th:if="${#fields.hasErrors('customerName')}" th:errors="*{customerName}"
-                style="color: red"></span>
-        </div>
-        <div class="form-group">
-          <label for="tel">連絡先TEL <span class="essential">(必須)</span></label>
-          <input type="tel" id="tel" name="tel" th:field="*{tel}" class="form-control" placeholder="0312345678" th:errorclass="fieldError"/>
-          <span th:if="${#fields.hasErrors('tel')}" th:errors="*{tel}"
-                style="color: red"></span>
-        </div>
-        <div class="form-group">
-          <label for="email">連絡先メールアドレス <span class="essential">(必須)</span></label>
-          <input type="text" id="email" name="email" th:field="*{email}" class="form-control" placeholder="test@test.com" th:errorclass="fieldError"/>
-          <span th:if="${#fields.hasErrors('tel')}" th:errors="*{tel}"
-                style="color: red"></span>
+      <div style="margin-bottom:30px;">
+        <legend style="font-weight:bold;">・個人情報</legend>
+        <div class="form-group form-inline">
+          <div class="col-sm-2" style="display:flex; flex-direction:column;">
+            <label for="customerName">氏名 <span class="essential">(必須)</span></label>
+            <input type="text" id="customerName" name="customerName" th:field="*{customerName}" class="form-control" placeholder="山田太郎" th:errorclass="fieldError"/>
+            <span th:if="${#fields.hasErrors('customerName')}" th:errors="*{customerName}"
+                  style="color: red"></span>
+          </div>
+          <div class="col-sm-5" style="display:flex; flex-direction:column;">
+            <label for="tel">連絡先TEL <span class="essential">(必須)</span></label>
+            <input type="tel" id="tel" name="tel" th:field="*{tel}" class="form-control" placeholder="0312345678" th:errorclass="fieldError"/>
+            <span th:if="${#fields.hasErrors('tel')}" th:errors="*{tel}"
+                  style="color: red"></span>
+          </div>
+          <div class="col-sm-5" style="display:flex; flex-direction:column;">
+            <label for="email">連絡先メールアドレス <span class="essential">(必須)</span></label>
+            <input type="text" id="email" name="email" th:field="*{email}" class="form-control" placeholder="test@test.com" th:errorclass="fieldError"/>
+            <span th:if="${#fields.hasErrors('tel')}" th:errors="*{tel}"
+                  style="color: red"></span>
+          </div>
         </div>
         <div class="form-group form-inline">
           <div class="col-sm-5" style="display:flex; flex-direction:column;">
@@ -71,55 +73,57 @@
 
       </fieldset>
       <fieldset style="margin-bottom:70px;">
-        <legend>荷物情報</legend>
-        <div class="input-information">
-          <div class="form-input">
-            <label for="box">段ボールの個数 <span class="essential">(必須)</span></label>
-            <div class="box-size">
-              <input type="text" id="box" name="box" th:field="*{box}" class="form-control" placeholder="10" th:errorclass="fieldError"/>
-              <span th:if="${#fields.hasErrors('box')}" th:errors="*{box}"
+        <legend style="font-weight:bold; margin-top:15px;">・荷物情報</legend>
+          <div class="form-group form-inline">
+            <div class="col-sm-4" style="display:flex; flex-direction:column;">
+              <label for="box">段ボールの個数 <span class="essential">(必須)</span></label>
+              <div class="box-size" style="display:flex; flex-direction:column;">
+               <input type="text" id="box" name="box" th:field="*{box}" class="form-control" placeholder="10" th:errorclass="fieldError"/>
+               <span th:if="${#fields.hasErrors('box')}" th:errors="*{box}"
                     style="color: red"></span>
+              </div>
+            </div>
+            <div class="col-sm-4" style="display:flex; flex-direction:column;">
+              <label for="bed">ベッドの個数 <span class="essential">(必須)</span></label>
+              <div class="box-size" style="display:flex; flex-direction:column;">
+                <input type="text" id="bed" name="bed" th:field="*{bed}" class="form-control" placeholder="3" th:errorclass="fieldError"/>
+                <span th:if="${#fields.hasErrors('box')}" th:errors="*{box}"
+                      style="color: red"></span>
+              </div>
+            </div>
+            <div class="col-sm-4" style="display:flex; flex-direction:column;">
+              <label for="bicycle">自転車の個数 <span class="essential">(必須)</span></label>
+              <div class="box-size" style="display:flex; flex-direction:column;">
+                <input type="text" id="bicycle" name="bicycle" th:field="*{bicycle}" class="form-control" placeholder="1" th:errorclass="fieldError"/>
+                <span th:if="${#fields.hasErrors('box')}" th:errors="*{box}"
+                      style="color: red"></span>
+              </div>
             </div>
           </div>
-          <div class="form-input">
-            <label for="bed">ベッドの個数 <span class="essential">(必須)</span></label>
-            <div class="box-size">
-              <input type="text" id="bed" name="bed" th:field="*{bed}" class="form-control" placeholder="3" th:errorclass="fieldError"/>
-              <span th:if="${#fields.hasErrors('box')}" th:errors="*{box}"
-                    style="color: red"></span>
+          <div class="form-group form-inline">
+            <div class="col-sm-6" style="display:flex; flex-direction:column;">
+              <label for="washingMachine">洗濯機の個数 <span class="essential">(必須)</span></label>
+              <div class="box-size" style="display:flex; flex-direction:column;">
+                <input type="text" id="washingMachine" name="washingMachine" th:field="*{washingMachine}" class="form-control"
+                       placeholder="1" th:errorclass="fieldError"/>
+                <span th:if="${#fields.hasErrors('box')}" th:errors="*{box}"
+                      style="color: red"></span>
+              </div>
+            </div>
+            <div class="col-sm-6" style="display:flex; flex-direction:column;">
+              <label for="hasWashingMachineSettingOption" >洗濯機の設置工事  <span class="essential">(必須)</span></label>
+              <div class="box-size" style="display:flex; flex-direction:column;">
+                <select id="hasWashingMachineSettingOption" name="hasWashingMachineSettingOption" class="form-control" th:field="*{hasWashingMachineSettingOption}">
+                  <option th:value="false" th:text="なし">なし</option>
+                  <option th:value="true" th:text="あり">あり</option>
+                </select>
+              </div>
             </div>
           </div>
-          <div class="form-input">
-            <label for="bicycle">自転車の個数 <span class="essential">(必須)</span></label>
-            <div class="box-size">
-              <input type="text" id="bicycle" name="bicycle" th:field="*{bicycle}" class="form-control" placeholder="1" th:errorclass="fieldError"/>
-              <span th:if="${#fields.hasErrors('box')}" th:errors="*{box}"
-                    style="color: red"></span>
-            </div>
-          </div>
-          <div class="form-input">
-            <label for="washingMachine">洗濯機の個数 <span class="essential">(必須)</span></label>
-            <div class="box-size">
-              <input type="text" id="washingMachine" name="washingMachine" th:field="*{washingMachine}" class="form-control"
-                     placeholder="1" th:errorclass="fieldError"/>
-              <span th:if="${#fields.hasErrors('box')}" th:errors="*{box}"
-                    style="color: red"></span>
-            </div>
-          </div>
-          <div class="form-input">
-            <label for="hasWashingMachineSettingOption" style="width:300px;">洗濯機の設置工事 <span class="essential">(必須)</span></label>
-            <div class="box-size">
-              <select id="hasWashingMachineSettingOption" name="hasWashingMachineSettingOption" class="form-control" th:field="*{hasWashingMachineSettingOption}">
-                <option th:value="false" th:text="なし">なし</option>
-                <option th:value="true" th:text="あり">あり</option>
-              </select>
-            </div>
-          </div>
-        </div>
       </fieldset>
       <div class="form-group">
         <div class="text-center">
-          <button type="submit" name="backToTop" class="btn btn-warning">TOPへ戻る</button>
+          <button type="submit" name="backToTop" class="btn btn-outline-primary">TOPへ戻る</button>
           <button type="submit" name="calculation" class="btn btn-primary">概算見積もりをする</button>
         </div>
       </div>
