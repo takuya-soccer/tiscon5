@@ -24,19 +24,19 @@
         <div class="form-group form-inline">
           <div class="col-sm-2" style="display:flex; flex-direction:column;">
             <label for="customerName">氏名 <span class="essential">(必須)</span></label>
-            <input type="text" id="customerName" name="customerName" th:field="*{customerName}" class="form-control" placeholder="山田太郎" th:errorclass="fieldError"/>
+            <input type="text" id="customerName" name="customerName" th:field="*{customerName}" class="form-control" placeholder="山田太郎" style="text-align:center;" th:errorclass="fieldError"/>
             <span th:if="${#fields.hasErrors('customerName')}" th:errors="*{customerName}"
                   style="color: red"></span>
           </div>
           <div class="col-sm-5" style="display:flex; flex-direction:column;">
             <label for="tel">連絡先TEL <span class="essential">(必須)</span></label>
-            <input type="tel" id="tel" name="tel" th:field="*{tel}" class="form-control" placeholder="0312345678" th:errorclass="fieldError"/>
+            <input type="tel" id="tel" name="tel" th:field="*{tel}" class="form-control" placeholder="0312345678" style="text-align:center;" th:errorclass="fieldError"/>
             <span th:if="${#fields.hasErrors('tel')}" th:errors="*{tel}"
                   style="color: red"></span>
           </div>
           <div class="col-sm-5" style="display:flex; flex-direction:column;">
             <label for="email">連絡先メールアドレス <span class="essential">(必須)</span></label>
-            <input type="text" id="email" name="email" th:field="*{email}" class="form-control" placeholder="test@test.com" th:errorclass="fieldError"/>
+            <input type="text" id="email" name="email" th:field="*{email}" class="form-control" placeholder="test@test.com" style="text-align:center;" th:errorclass="fieldError"/>
             <span th:if="${#fields.hasErrors('tel')}" th:errors="*{tel}"
                   style="color: red"></span>
           </div>
@@ -78,7 +78,7 @@
             <div class="col-sm-4" style="display:flex; flex-direction:column;">
               <label for="box">段ボールの個数 <span class="essential">(必須)</span></label>
               <div class="box-size" style="display:flex; flex-direction:column;">
-               <input type="text" id="box" name="box" th:field="*{box}" class="form-control" placeholder="10" th:errorclass="fieldError"/>
+               <input type="text" id="box" name="box" th:field="*{box}" class="form-control" placeholder="10" style="text-align:center;"  th:errorclass="fieldError"/>
                <span th:if="${#fields.hasErrors('box')}" th:errors="*{box}"
                     style="color: red"></span>
               </div>
@@ -86,7 +86,7 @@
             <div class="col-sm-4" style="display:flex; flex-direction:column;">
               <label for="bed">ベッドの個数 <span class="essential">(必須)</span></label>
               <div class="box-size" style="display:flex; flex-direction:column;">
-                <input type="text" id="bed" name="bed" th:field="*{bed}" class="form-control" placeholder="3" th:errorclass="fieldError"/>
+                <input type="text" id="bed" name="bed" th:field="*{bed}" class="form-control" placeholder="3" style="text-align:center;" th:errorclass="fieldError"/>
                 <span th:if="${#fields.hasErrors('box')}" th:errors="*{box}"
                       style="color: red"></span>
               </div>
@@ -94,7 +94,7 @@
             <div class="col-sm-4" style="display:flex; flex-direction:column;">
               <label for="bicycle">自転車の個数 <span class="essential">(必須)</span></label>
               <div class="box-size" style="display:flex; flex-direction:column;">
-                <input type="text" id="bicycle" name="bicycle" th:field="*{bicycle}" class="form-control" placeholder="1" th:errorclass="fieldError"/>
+                <input type="text" id="bicycle" name="bicycle" th:field="*{bicycle}" class="form-control" placeholder="1" style="text-align:center;" th:errorclass="fieldError"/>
                 <span th:if="${#fields.hasErrors('box')}" th:errors="*{box}"
                       style="color: red"></span>
               </div>
@@ -105,7 +105,7 @@
               <label for="washingMachine">洗濯機の個数 <span class="essential">(必須)</span></label>
               <div class="box-size" style="display:flex; flex-direction:column;">
                 <input type="text" id="washingMachine" name="washingMachine" th:field="*{washingMachine}" class="form-control"
-                       placeholder="1" th:errorclass="fieldError"/>
+                       placeholder="1" style="text-align:center;" th:errorclass="fieldError"/>
                 <span th:if="${#fields.hasErrors('box')}" th:errors="*{box}"
                       style="color: red"></span>
               </div>
